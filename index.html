@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STEP Economics | Education, Research & Strategy</title>
+    <title>STEP Economics | Education, Research &amp; Strategy</title>
     <style>
         :root {
             /* Brand Identity Palette */
@@ -488,61 +488,103 @@
             padding-top: 1.5rem;
         }
 
+        /* Under Development Notice — STEP Economics Brand Style */
+        .development-notice {
+            background: #f0f7f1;
+            border-top: 1px solid #d5e6d7;
+            border-bottom: 1px solid #d5e6d7;
+            padding: 1.1rem 2rem;
+        }
+
+        .notice-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .notice-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--brand-green);
+            color: var(--white);
+            display: grid;
+            place-items: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: 0 2px 5px rgba(46, 125, 50, 0.18);
+        }
+
+        .notice-content h3 {
+            color: var(--brand-navy);
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .notice-content p {
+            color: #47704a;
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+
         /* News & Updates Section */
-.news-section {
-    background-color: var(--white);
-    border-top: 1px solid #e2e8f0;
-}
+        .news-section {
+            background-color: var(--white);
+            border-top: 1px solid #e2e8f0;
+        }
 
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
 
-.news-card {
-    background-color: #f8fafc;
-    padding: 2rem;
-    border-radius: 4px;
-    border-left: 4px solid var(--brand-green);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
+        .news-card {
+            background-color: #f8fafc;
+            padding: 2rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--brand-green);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-.news-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-}
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
 
-.news-date {
-    display: inline-block;
-    color: var(--brand-green);
-    font-size: 0.75rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 0.8rem;
-}
+        .news-date {
+            display: inline-block;
+            color: var(--brand-green);
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
 
-.news-card h3 {
-    color: var(--brand-navy);
-    font-size: 1.35rem;
-    margin-bottom: 0.7rem;
-}
+        .news-card h3 {
+            color: var(--brand-navy);
+            font-size: 1.35rem;
+            margin-bottom: 0.7rem;
+        }
 
-.news-card p {
-    color: var(--brand-gray);
-    margin-bottom: 1.2rem;
-}
+        .news-card p {
+            color: var(--brand-gray);
+            margin-bottom: 1.2rem;
+        }
 
-.news-link {
-    color: var(--brand-green);
-    text-decoration: none;
-    font-weight: bold;
-}
+        .news-link {
+            color: var(--brand-green);
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.news-link:hover {
-    text-decoration: underline;
-}
+        .news-link:hover {
+            text-decoration: underline;
+        }
 
         /* Responsive Layout Overrides */
         @media (max-width: 768px) {
@@ -560,6 +602,24 @@
             }
             .hero-buttons {
                 flex-direction: column;
+            }
+            .development-notice {
+                padding: 1rem 1.2rem;
+            }
+            .notice-container {
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+            .notice-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+            .notice-content h3 {
+                font-size: 0.98rem;
+            }
+            .notice-content p {
+                font-size: 0.84rem;
             }
             .founder-grid {
                 grid-template-columns: 1fr;
@@ -583,8 +643,9 @@
             <nav>
                 <a href="#subjects">Subjects</a>
                 <a href="#examprep">Exam Prep Hub</a>
-                <a href="https://www.linkedin.com/company/stepeconomics" target="_blank">LinkedIn</a>
-                <a href="https://www.facebook.com/stepeconomics" target="_blank">Facebook</a>
+                <a href="#news">News &amp; Updates</a>
+                <a href="https://www.linkedin.com/company/stepeconomics" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.facebook.com/stepeconomics" target="_blank" rel="noopener noreferrer">Facebook</a>
             </nav>
         </div>
     </header>
@@ -597,7 +658,18 @@
             <div class="hero-buttons">
                 <a href="#subjects" class="btn btn-brand">Explore Subjects</a>
                 <a href="#examprep" class="btn btn-outline">Exam Prep Hub</a>
-                <a href="#news" class="btn btn-outline">News & Updates</a>
+                <a href="#news" class="btn btn-outline">News &amp; Updates</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Under Development Notice -->
+    <section class="development-notice" aria-labelledby="development-notice-title">
+        <div class="notice-container">
+            <div class="notice-icon" aria-hidden="true">!</div>
+            <div class="notice-content">
+                <h3 id="development-notice-title">Notice: Website Under Development</h3>
+                <p>We sincerely apologize for any inconvenience caused. STEP Economics is currently under development, and some features, resources, and content may not be fully available. We appreciate your patience and support as we continue to improve the platform.</p>
             </div>
         </div>
     </section>
@@ -613,7 +685,7 @@
                 <p>Focused preparation structures and targeted reference material designed for the Assistant Director examination.</p>
             </div>
             <div class="card">
-                <h3>Research & Data</h3>
+                <h3>Research &amp; Data</h3>
                 <p>Access structured local reports, regional sustainability deep-dives, and macroeconomic intelligence datasets.</p>
             </div>
             <div class="card">
@@ -668,7 +740,7 @@
             </div>
 
             <div class="resource-box">
-                <h3 class="quiz-title">Notes & Resources</h3>
+                <h3 class="quiz-title">Notes &amp; Resources</h3>
                 <p class="quiz-subtitle">Free Academic Downloads</p>
                 
                 <ul class="download-list">
@@ -700,38 +772,28 @@
 
     <section class="news-section" id="news">
         <div class="section">
-            <h2 class="section-title">News & Updates</h2>
+            <h2 class="section-title">News &amp; Updates</h2>
 
             <div class="news-grid">
-
                 <div class="news-card">
                     <span class="news-date">LATEST UPDATE</span>
                     <h3>STEP Economics Updates</h3>
-                    <p>
-                    Latest economics education, research, policy analysis,
-                    economic insights, and important academic updates.
-                    </p>
-                    <a href="#" class="news-link">Read More →</a>
+                    <p>Latest economics education, research, policy analysis, economic insights, and important academic updates.</p>
+                    <a href="#" class="news-link" aria-label="Read more about STEP Economics updates">Read More &rarr;</a>
                 </div>
 
                 <div class="news-card">
                     <span class="news-date">RESEARCH</span>
-                    <h3>Research & Publications</h3>
-                    <p>
-                        Explore new research activities, working papers,
-                        economic analysis, and research-related developments.
-                    </p>
-                <a href="#" class="news-link">Read More →</a>
-            </div>
+                    <h3>Research &amp; Publications</h3>
+                    <p>Explore new research activities, working papers, economic analysis, and research-related developments.</p>
+                    <a href="#" class="news-link" aria-label="Read more about research and publications">Read More &rarr;</a>
+                </div>
 
                 <div class="news-card">
                     <span class="news-date">ECONOMY</span>
-                    <h3>Economic & Policy Updates</h3>
-                    <p>
-                    Follow important developments in Nepal's economy,
-                    monetary policy, fiscal policy, markets, and development.
-                    </p>
-                    <a href="#" class="news-link">Read More →</a>
+                    <h3>Economic &amp; Policy Updates</h3>
+                    <p>Follow important developments in Nepal's economy, monetary policy, fiscal policy, markets, and development.</p>
+                    <a href="#" class="news-link" aria-label="Read more economic and policy updates">Read More &rarr;</a>
                 </div>
 
             </div>
@@ -758,9 +820,9 @@
                     </ul>
                 </div>
                 <div class="founder-block">
-                    <h3>Corporate Experience & Research</h3>
+                    <h3>Corporate Experience &amp; Research</h3>
                     <ul>
-                        <li><strong>Global IME Bank Limited (2017–2025)</strong><br>8 years across Corporate Finance, Planning & Accounting, Compliance, Regulatory Policies, and Remittance tracking.</li>
+                        <li><strong>Global IME Bank Limited (2017–2025)</strong><br>8 years across Corporate Finance, Planning &amp; Accounting, Compliance, Regulatory Policies, and Remittance tracking.</li>
                         <li><strong>Janata Bank Nepal Limited (2016–2017)</strong><br>Customer Service Delivery foundations.</li>
                         <li><strong>Published Thought Leadership</strong><br>Author of <em>“Potential of Solar Energy in South Asia: Current Challenges and Opportunities”</em>, evaluating economic dimensions of renewable energy.</li>
                     </ul>
@@ -772,10 +834,10 @@
     <section class="social-strip">
         <h2>Connect With Our Platforms</h2>
         <div class="social-links-container">
-            <a href="https://www.facebook.com/stepeconomics" target="_blank" class="social-btn">Facebook</a>
-            <a href="https://www.linkedin.com/company/stepeconomics" target="_blank" class="social-btn">LinkedIn</a>
-            <a href="https://www.instagram.com/stepeconomics/" target="_blank" class="social-btn">Instagram</a>
-            <a href="https://www.threads.net/@stepeconomics" target="_blank" class="social-btn">Threads</a>
+            <a href="https://www.facebook.com/stepeconomics" target="_blank" rel="noopener noreferrer" class="social-btn">Facebook</a>
+            <a href="https://www.linkedin.com/company/stepeconomics" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn</a>
+            <a href="https://www.instagram.com/stepeconomics/" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram</a>
+            <a href="https://www.threads.net/@stepeconomics" target="_blank" rel="noopener noreferrer" class="social-btn">Threads</a>
         </div>
     </section>
 
