@@ -6,7 +6,7 @@
     <title>STEP Economics | Education, Research & Strategy</title>
     <style>
         :root {
-            /* Brand Identity Colors */
+            /* Brand Identity Palette */
             --brand-navy: #1C365B;
             --brand-green: #2E7D32;
             --brand-gray: #646464;
@@ -33,7 +33,7 @@
             font-weight: 700;
         }
 
-        /* Header Navigation */
+        /* Fixed Navigation Header */
         header {
             background-color: var(--white);
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -92,7 +92,7 @@
             color: var(--brand-green);
         }
 
-        /* Hero Banner Section */
+        /* Branding Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--brand-navy) 0%, #112239 100%);
             color: var(--white);
@@ -162,7 +162,7 @@
             background-color: rgba(255,255,255,0.1);
         }
 
-        /* Main Features Grid */
+        /* Grid Component Blocks */
         .section {
             max-width: 1200px;
             margin: 0 auto;
@@ -196,7 +196,7 @@
             font-size: 1.4rem;
         }
 
-        /* Academic Subjects Section */
+        /* Course Matrix Sections */
         .subjects-section {
             background-color: #f1f5f9;
         }
@@ -226,15 +226,15 @@
             color: var(--brand-green);
         }
 
-        /* Interactive Hub Wrapper */
+        /* Two-Column Hub Container Layout */
         .interactive-container {
             display: grid;
             grid-template-columns: 1.2fr 1fr;
-            gap: 2rem;
+            gap: 2.5rem;
             margin-top: 1rem;
         }
 
-        .quiz-box {
+        .quiz-box, .resource-box {
             background-color: var(--white);
             padding: 2.5rem;
             border-radius: 4px;
@@ -297,20 +297,7 @@
             display: none;
         }
 
-        .feedback-success {
-            background-color: #dcfce7;
-            color: #166534;
-        }
-
-        /* Resources Styling */
-        .resource-box {
-            background-color: var(--white);
-            padding: 2.5rem;
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border: 1px solid #e2e8f0;
-        }
-
+        /* Material List Item Management Styles */
         .download-list {
             list-style: none;
             margin-top: 1.5rem;
@@ -355,7 +342,7 @@
             color: var(--white);
         }
 
-        /* Founder Spotlight Section */
+        /* Corporate Background Profile Elements */
         .founder-section {
             background-color: var(--white);
             border-top: 1px solid #e2e8f0;
@@ -397,3 +384,436 @@
         .founder-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .founder-block h3 {
+            color: var(--brand-navy);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.4rem;
+        }
+
+        .founder-block ul {
+            list-style: none;
+        }
+
+        .founder-block li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .founder-block li::before {
+            content: "■";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--brand-green);
+            font-size: 0.8rem;
+        }
+
+        .founder-block li strong {
+            color: var(--brand-navy);
+        }
+
+        /* Social Platform Channels Strip */
+        .social-strip {
+            background-color: #e2e8f0;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid #cbd5e1;
+        }
+
+        .social-strip h2 {
+            color: var(--brand-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            background-color: var(--white);
+            color: var(--brand-navy);
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+            border: 1px solid #cbd5e1;
+        }
+
+        .social-btn:hover {
+            background-color: var(--brand-navy);
+            color: var(--white);
+            transform: translateY(-1px);
+        }
+
+        /* Branding Core Structural Footer */
+        footer {
+            background-color: var(--brand-navy);
+            color: #cbd5e1;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 3px solid var(--brand-green);
+        }
+
+        .footer-tagline {
+            font-family: Cambria, serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--white);
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-mission {
+            font-size: 0.95rem;
+            color: #a3c1ad;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-copyright {
+            font-size: 0.85rem;
+            color: var(--brand-gray);
+            border-top: 1px solid #2a4773;
+            padding-top: 1.5rem;
+        }
+
+        /* News & Updates Section */
+.news-section {
+    background-color: var(--white);
+    border-top: 1px solid #e2e8f0;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.news-card {
+    background-color: #f8fafc;
+    padding: 2rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--brand-green);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.news-date {
+    display: inline-block;
+    color: var(--brand-green);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+}
+
+.news-card h3 {
+    color: var(--brand-navy);
+    font-size: 1.35rem;
+    margin-bottom: 0.7rem;
+}
+
+.news-card p {
+    color: var(--brand-gray);
+    margin-bottom: 1.2rem;
+}
+
+.news-link {
+    color: var(--brand-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
+        /* Responsive Layout Overrides */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1.2rem;
+                text-align: center;
+            }
+            nav {
+                justify-content: center;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .interactive-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo-group">
+                <a href="#" class="logo">STEP Economics</a>
+                <div class="logo-tagline">Education | Research | Strategy</div>
+            </div>
+            <nav>
+                <a href="#subjects">Subjects</a>
+                <a href="#examprep">Exam Prep Hub</a>
+                <a href="https://www.linkedin.com/company/stepeconomics" target="_blank">LinkedIn</a>
+                <a href="https://www.facebook.com/stepeconomics" target="_blank">Facebook</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-tag">Innovative Research • Strategic Insight • Economic Growth</div>
+            <h1>STEP Economics</h1>
+            <p>Navigating Progress Through Economic Insight</p>
+            <div class="hero-buttons">
+                <a href="#subjects" class="btn btn-brand">Explore Subjects</a>
+                <a href="#examprep" class="btn btn-outline">Exam Prep Hub</a>
+                <a href="#news" class="btn btn-outline">News & Updates</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="grid-features">
+            <div class="card">
+                <h3>Comprehensive Notes</h3>
+                <p>Structured, step-by-step framework items tailored for direct educational clarity and macro analysis.</p>
+            </div>
+            <div class="card">
+                <h3>Standard Exam Prep</h3>
+                <p>Focused preparation structures and targeted reference material designed for the Assistant Director examination.</p>
+            </div>
+            <div class="card">
+                <h3>Research & Data</h3>
+                <p>Access structured local reports, regional sustainability deep-dives, and macroeconomic intelligence datasets.</p>
+            </div>
+            <div class="card">
+                <h3>Case Studies</h3>
+                <p>Real-world financial model workflows and operational economics application tracking updates.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="subjects-section" id="subjects">
+        <div class="section">
+            <h2 class="section-title">Browse Academic Fields</h2>
+            <div class="grid-subjects">
+                <div class="subject-item">Micro Economics</div>
+                <div class="subject-item">Macro Economics</div>
+                <div class="subject-item">Monetary Economics</div>
+                <div class="subject-item">Development Economics</div>
+                <div class="subject-item">Public Economics</div>
+                <div class="subject-item">Economic Thought</div>
+                <div class="subject-item">Econometrics</div>
+                <div class="subject-item">International Economics</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="examprep">
+        <div class="interactive-container">
+            <div class="quiz-box">
+                <h3 class="quiz-title">Standard Exam Hub</h3>
+                <p class="quiz-subtitle">Assistant Director Practice Question</p>
+                
+                <div class="question-text">
+                    Which monetary policy instrument is primarily used by a central bank to directly influence the liquidity volume within commercial banking channels?
+                </div>
+                
+                <div class="options-list">
+                    <label class="option-item">
+                        <input type="radio" name="quiz" value="wrong">
+                        <span>A) Moral Suasion directives</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="quiz" value="correct">
+                        <span>B) Open Market Operations (OMO)</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="quiz" value="wrong">
+                        <span>C) Margin requirement scaling</span>
+                    </label>
+                </div>
+                <button class="btn btn-brand" onclick="checkAnswer()">Submit Verification</button>
+                <div id="quizFeedback" class="quiz-feedback"></div>
+            </div>
+
+            <div class="resource-box">
+                <h3 class="quiz-title">Notes & Resources</h3>
+                <p class="quiz-subtitle">Free Academic Downloads</p>
+                
+                <ul class="download-list">
+                    <li class="download-item">
+                        <div class="file-info">
+                            <h4>Macroeconomic Indicators</h4>
+                            <p>PDF Document • 4.2 MB</p>
+                        </div>
+                        <a href="#" class="btn-download">Download</a>
+                    </li>
+                    <li class="download-item">
+                        <div class="file-info">
+                            <h4>Monetary Economics Syllabus</h4>
+                            <p>PDF Document • 2.8 MB</p>
+                        </div>
+                        <a href="#" class="btn-download">Download</a>
+                    </li>
+                    <li class="download-item">
+                        <div class="file-info">
+                            <h4>Assistant Director Prep Guide</h4>
+                            <p>PDF Document • 5.1 MB</p>
+                        </div>
+                        <a href="#" class="btn-download">Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section" id="news">
+        <div class="section">
+            <h2 class="section-title">News & Updates</h2>
+
+            <div class="news-grid">
+
+                <div class="news-card">
+                    <span class="news-date">LATEST UPDATE</span>
+                    <h3>STEP Economics Updates</h3>
+                    <p>
+                    Latest economics education, research, policy analysis,
+                    economic insights, and important academic updates.
+                    </p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+
+                <div class="news-card">
+                    <span class="news-date">RESEARCH</span>
+                    <h3>Research & Publications</h3>
+                    <p>
+                        Explore new research activities, working papers,
+                        economic analysis, and research-related developments.
+                    </p>
+                <a href="#" class="news-link">Read More →</a>
+            </div>
+
+                <div class="news-card">
+                    <span class="news-date">ECONOMY</span>
+                    <h3>Economic & Policy Updates</h3>
+                    <p>
+                    Follow important developments in Nepal's economy,
+                    monetary policy, fiscal policy, markets, and development.
+                    </p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="founder-section">
+        <div class="founder-container">
+            <div class="founder-header">
+                <h2>Founder Spotlight</h2>
+                <p>Sagar Khadka</p>
+            </div>
+            <p class="founder-bio">
+                Sagar Khadka founded STEP Economics to close the gap between rigorous economic theory and the practical decisions that businesses, policymakers, and students face every day. His approach is shaped simultaneously by a deep academic grounding in economics and eight years spent inside the operating engine of one of Nepal's leading commercial banks—a rare combination that lets him move fluidly between research, strategy, and real-world execution.
+            </p>
+            <div class="founder-grid">
+                <div class="founder-block">
+                    <h3>Academic Foundation</h3>
+                    <ul>
+                        <li><strong>M.Phil. in Economics (In Progress)</strong><br>Central Department of Economics, Tribhuvan University</li>
+                        <li><strong>Master's Degree in Economics</strong><br>Tribhuvan University (Applied Economic Analysis Concentration)</li>
+                        <li><strong>Master's in Business Studies (MBS)</strong><br>Shanker Dev Campus, Tribhuvan University</li>
+                        <li><strong>Bachelor in Business Administration (BBA)</strong><br>CITE, Purbanchal University</li>
+                    </ul>
+                </div>
+                <div class="founder-block">
+                    <h3>Corporate Experience & Research</h3>
+                    <ul>
+                        <li><strong>Global IME Bank Limited (2017–2025)</strong><br>8 years across Corporate Finance, Planning & Accounting, Compliance, Regulatory Policies, and Remittance tracking.</li>
+                        <li><strong>Janata Bank Nepal Limited (2016–2017)</strong><br>Customer Service Delivery foundations.</li>
+                        <li><strong>Published Thought Leadership</strong><br>Author of <em>“Potential of Solar Energy in South Asia: Current Challenges and Opportunities”</em>, evaluating economic dimensions of renewable energy.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-strip">
+        <h2>Connect With Our Platforms</h2>
+        <div class="social-links-container">
+            <a href="https://www.facebook.com/stepeconomics" target="_blank" class="social-btn">Facebook</a>
+            <a href="https://www.linkedin.com/company/stepeconomics" target="_blank" class="social-btn">LinkedIn</a>
+            <a href="https://www.instagram.com/stepeconomics/" target="_blank" class="social-btn">Instagram</a>
+            <a href="https://www.threads.net/@stepeconomics" target="_blank" class="social-btn">Threads</a>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer-tagline">Innovative Research • Strategic Insight • Economic Growth</p>
+        <p class="footer-mission">"Learning is Free for Everyone. Free Education for All."</p>
+        <div class="footer-copyright">
+            <p>&copy; 2026 STEP Economics | Kathmandu, Nepal | Prepared for Free Education</p>
+        </div>
+    </footer>
+
+    <script>
+        function checkAnswer() {
+            const selectedOption = document.querySelector('input[name="quiz"]:checked');
+            const feedbackBox = document.getElementById('quizFeedback');
+            
+            if (!selectedOption) {
+                feedbackBox.style.display = "block";
+                feedbackBox.className = "quiz-feedback";
+                feedbackBox.style.backgroundColor = "#fee2e2";
+                feedbackBox.style.color = "#991b1b";
+                feedbackBox.innerText = "Please select an answer framework item before submitting.";
+                return;
+            }
+            
+            feedbackBox.style.display = "block";
+            if (selectedOption.value === "correct") {
+                feedbackBox.className = "quiz-feedback";
+                feedbackBox.style.backgroundColor = "#dcfce7";
+                feedbackBox.style.color = "#166534";
+                feedbackBox.innerText = "Correct! Open Market Operations directly influence systemic liquidity volumes by buying or selling government securities.";
+            } else {
+                feedbackBox.className = "quiz-feedback";
+                feedbackBox.style.backgroundColor = "#fee2e2";
+                feedbackBox.style.color = "#991b1b";
+                feedbackBox.innerText = "Incorrect answer value. Hint: Think about systemic open purchases or asset sales by a central bank framework.";
+            }
+        }
+    </script>
+</body>
+</html>
